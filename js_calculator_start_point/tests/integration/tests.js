@@ -40,4 +40,15 @@ describe('calculator functionality', function() {
 
 
 
+  it('should add 1 and 4 to get 5', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number1')).click();
+    element(by.css('#operator_add')).click();
+    element(by.css('#number4')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('5')
+  })
+
+
+
 });
