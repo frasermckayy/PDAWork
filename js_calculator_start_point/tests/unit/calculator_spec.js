@@ -36,6 +36,15 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 3);
   });
 
+  it("doing multiple operations", function(){
+    calculator.previousTotal = 8;
+    calculator.subtract(4);
+    calculator.multipy(6)
+    assert.strictEqual(calculator.runningTotal, 24);
+  });
+
+
+
 
 
 
