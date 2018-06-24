@@ -79,6 +79,24 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('24')
   })
 
+  it('should clear the running total without the calculation being cleared', function(){
+    running_total = element(by.css('#running_total'));
+    element(by.css('#number2')).click();
+    element(by.css('#operator_add')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#clear')).click();
+    element(by.css('#number8')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('10')
+  })
+
+  it("clear the running total without affecting the calculation", function() {
+  element(by.css("#number8")).click();
+  element(by.css("#number8")).click();
+  element(by.css("#number8")).click();
+  element(by.css("#clear")).click();
+  expect(running_total.getAttribute("value")).to.eventually.equal("0");
+});
+
 
 
 
