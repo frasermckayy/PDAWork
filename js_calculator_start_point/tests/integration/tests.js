@@ -67,6 +67,18 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('888')
   })
 
+  it('should do 8 subtracted by 4 then times that answer by 6', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number8')).click();
+    element(by.css('#operator_subtract')).click();
+    element(by.css('#number4')).click();
+    element(by.css('#operator_equals')).click();
+    element(by.css('#operator_multiply')).click();
+    element(by.css('#number6')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('24')
+  })
+
 
 
 
