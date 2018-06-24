@@ -24,6 +24,12 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 3);
   });
 
+  it("should get 5 when doing 1+4", function(){
+    calculator.previousTotal = 1;
+    calculator.add(4);
+    assert.strictEqual(calculator.runningTotal, 5);
+  });
+
 
 
 
