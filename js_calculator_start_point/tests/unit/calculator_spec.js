@@ -30,6 +30,12 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 5);
   });
 
+  it("should get 3 when 7-4", function(){
+    calculator.previousTotal = 7;
+    calculator.subtract(4);
+    assert.strictEqual(calculator.runningTotal, 3);
+  });
+
 
 
 
