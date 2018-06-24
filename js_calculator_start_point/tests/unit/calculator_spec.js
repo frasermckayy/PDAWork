@@ -5,7 +5,8 @@ describe('calculator', function () {
   beforeEach(function () {
     calculator = new Calculator()
   });
-
+  
+  //mocha
   // write unit tests here in the form of "it should do something..."
   it('it has a sample test', function(){
     assert.equal(true, true)
