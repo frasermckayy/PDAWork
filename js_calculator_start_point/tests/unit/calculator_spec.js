@@ -17,7 +17,13 @@ describe('calculator', function () {
     calculator.multiply(5);
     assert.strictEqual(calculator.runningTotal, 15);
   });
-  
+
+  it("should get 3 after dividing 21 by 3", function(){
+    calculator.previousTotal = 21;
+    calculator.divide(7);
+    assert.strictEqual(calculator.runningTotal, 3);
+  });
+
 
 
 
